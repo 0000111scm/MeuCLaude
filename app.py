@@ -1,19 +1,12 @@
 import os
 import streamlit as st
-from anthropic import Anthropic
+from groq import Groq
 
 st.set_page_config(page_title="MeuClaude", page_icon="🤖", layout="centered")
 
-st.markdown("""
-<style>
-[data-testid="stChatMessage"] { border-radius: 12px; }
-</style>
-""", unsafe_allow_html=True)
+client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
 
-api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-client = Anthropic(api_key=api_key) if api_key else None
-
-SYSTEM = "Você é MeuClaude, assistente pessoal do 0000111scm. Ajuda com código, programação, arquivos, explicações técnicas, ideias, análises e qualquer tarefa. Responda sempre em português. Seja direto, prático e útil."
+SYSTEM = "Você é MeuClaude, assistente pessoal do 0000111scm. Especialista em código e programação. Responda sempre em português. Seja direto, prático e útil."
 
 st.title("🤖 MeuClaude")
 st.caption("Assistente pessoal · by 0000111")
@@ -31,13 +24,12 @@ if prompt := st.chat_input("Manda sua pergunta..."):
         st.markdown(prompt)
     with st.chat_message("assistant"):
         with st.spinner("Pensando..."):
-            r = client.messages.create(
-                model="claude-opus-4-5",
-                max_tokens=2048,
-                system=SYSTEM,
-                messages=st.session_state.msgs
+            r = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[{"role": "system", "content": SYSTEM}] + st.session_state.msgs,
+                max_tokens=2048
             )
-            reply = r.content[0].text
+            reply = r.choices[0].message.content
         st.markdown(reply)
     st.session_state.msgs.append({"role": "assistant", "content": reply})
 
