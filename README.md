@@ -1,60 +1,96 @@
-# \# MeuClaude 🤖
+<div align="center">
 
-# 
 
-# Console Python para interagir com o Claude da Anthropic via Streamlit.
 
-# 
+\# 🤖 MeuClaude
 
-# \## Funcionalidades
 
-# 
 
-# \- 🔧 \*\*Turn Loop\*\* — envia prompts com múltiplos turnos
+\*\*Console Python para interagir com o Claude da Anthropic\*\*
 
-# \- 🗂️ \*\*Roteamento PT-BR\*\* — reconhece comandos em português
 
-# \- 📁 \*\*FileReadTool\*\* — lê arquivos do workspace
 
-# \- 🔍 \*\*GlobTool\*\* — busca arquivos por padrão
+\[!\[Python](https://img.shields.io/badge/Python-3.x-blue?logo=python\&style=for-the-badge)](https://python.org)
 
-# \- 🔎 \*\*GrepTool\*\* — busca texto dentro de arquivos
+\[!\[Streamlit](https://img.shields.io/badge/Streamlit-app-FF4B4B?logo=streamlit\&style=for-the-badge)](https://streamlit.io)
 
-# \- ✏️ \*\*FileEditTool\*\* — edita arquivos
+\[!\[Anthropic](https://img.shields.io/badge/Powered%20by-Claude-blueviolet?style=for-the-badge)](https://anthropic.com)
 
-# \- 💻 \*\*BashTool\*\* — executa comandos (gateado por segurança)
 
-# 
 
-# \## Como rodar
+</div>
 
-# 
 
-# ```bash
 
-# pip install streamlit anthropic
+\---
 
-# python -m streamlit run app.py
 
-# ```
 
-# 
+\## 🚀 Quickstart
 
-# \## Tecnologias
 
-# 
 
-# \- Python 3.x
+```bash
 
-# \- Streamlit
+pip install streamlit anthropic
 
-# \- Anthropic API
+python -m streamlit run app.py
 
-# 
+```
 
-# \## Autor
 
-# 
 
-# Desenvolvido por \[0000111scm](https://github.com/0000111scm)
+\---
+
+
+
+\## ⚙️ Funcionalidades
+
+
+
+| Ferramenta | Descrição |
+
+|---|---|
+
+| 🔧 \*\*Turn Loop\*\* | Envia prompts com múltiplos turnos |
+
+| 🗂️ \*\*Roteamento PT-BR\*\* | Reconhece comandos em português |
+
+| 📁 \*\*FileReadTool\*\* | Lê arquivos do workspace |
+
+| 🔍 \*\*GlobTool\*\* | Busca arquivos por padrão |
+
+| 🔎 \*\*GrepTool\*\* | Busca texto dentro de arquivos |
+
+| ✏️ \*\*FileEditTool\*\* | Edita arquivos |
+
+| 💻 \*\*BashTool\*\* | Executa comandos (gateado por segurança) |
+
+
+
+\---
+
+
+
+\## 🛠️ Tecnologias
+
+
+
+\- \*\*Python 3.x\*\*
+
+\- \*\*Streamlit\*\* — interface web
+
+\- \*\*Anthropic API\*\* — modelo Claude
+
+
+
+\---
+
+
+
+\## 👤 Autor
+
+
+
+Desenvolvido por \*\*\[0000111scm](https://github.com/0000111scm)\*\*
 
