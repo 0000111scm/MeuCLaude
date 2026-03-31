@@ -4,7 +4,7 @@ from groq import Groq
 
 st.set_page_config(page_title="MeuClaude", page_icon="🤖", layout="centered")
 
-client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
+client = Groq(api_key="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")
 
 SYSTEM = "Você é MeuClaude, assistente pessoal do 0000111scm. Especialista em código e programação. Responda sempre em português. Seja direto, prático e útil."
 
