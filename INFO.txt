@@ -1,0 +1,1 @@
+INFO.txt: Este projeto e uma portabilidade do Claude Code para Python.
